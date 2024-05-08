@@ -19,11 +19,8 @@ try {
         localStorage.setItem("Contraseña",password.value);
         nombreLocalStorage = localStorage.getItem("nombre");
     
-        console.log(nombreLocalStorage)
-        if (Name.value === nombreLocalStorage){
-            return alert("usuario ya creado")
-        }
-      if (email.value != CorreoLocalStorage){
+        
+      if (Name.value == nombreLocalStorage){
         return alert ("Usuario creado Exitosamente ✅")
       }
     })
