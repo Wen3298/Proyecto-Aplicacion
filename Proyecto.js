@@ -17,6 +17,11 @@
 
         localStorage.setItem("registro",JSON.stringify(datosLocalStorage))
     }
+    function validar() {
+        datosLocalStorage.find(registro=>registro.nombre===Nombre.value)
+
+        
+    }
 
 btnIngresar.addEventListener("click",()=>{
     guardarInfoUsuarios();
