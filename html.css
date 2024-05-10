@@ -19,7 +19,7 @@ h3{
 img{
     width: 150px;
     height: 150px;
-    border: 7px solid #fff;
+    border: 2px solid #fff;
     overflow: hidden;
     cursor: pointer;
     box-shadow: 0 5px 15px rgba(0, 0, 0 1);
@@ -27,14 +27,13 @@ img{
   
 }
 
-.Contenedor{
+.contenedor-imagen{
   display: flex;
-  gap: 10px;
- margin-left: 10px;
- justify-content: center;
- flex-wrap: wrap;
- 
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
+
 
 .Contenedor .popup-image{
   position: fixed;
@@ -71,4 +70,6 @@ img{
   object-fit: cover;
 
 }
-
+.autor{
+ margin-top:280px ;
+}

@@ -1,51 +1,26 @@
 
 
-// const Name = document.getElementById("name")
-// const correo = document.getElementById("email")
-// const contrasenia = document.getElementById("password")
-// const Signupform = document.getElementById("signupform")
-// const Loginform = document.getElementById("loginform")
-// const btnIngresar = document.getElementById("btnIngresar")
-// const emailLogin = document.getElementById("emailLogin")
-// const passwordLogin = document.getElementById("passwordLogin")
+ const Nombre = document.getElementById("name")
+ const Correo = document.getElementById("email")
+ const contrasenia = document.getElementById("password")
+ const btnIngresar = document.getElementById("btnIngresar")
 
-// let nombreLocalStorage
-// let CorreoLocalStorage
-// let ContraseniaLocalStorage
+    let datosLocalStorage = JSON.parse(localStorage.getItem("registro")) || []
+ 
+    function guardarInfoUsuarios() {
+        let datosUsuario = {
+            nombre: Nombre.value,
+            correo: Correo.value,
+            clave: contrasenia.value
+        }
+        datosLocalStorage.push(datosUsuario)
 
-// try {
-//     Signupform.addEventListener("submit" ,(e)=>{
-//         e.preventDefault()
-//         localStorage.setItem("nombre", Name.value);
-//         localStorage.setItem("correo", email.value);
-//         localStorage.setItem("Contraseña",password.value);
-//         nombreLocalStorage = localStorage.getItem("nombre");
+        localStorage.setItem("registro",JSON.stringify(datosLocalStorage))
+    }
 
-
-//       if (Name.value == nombreLocalStorage){
-//         return alert ("Usuario creado Exitosamente ✅")
-//       }
-//     })
-
-// } catch (error) {
-//     console.log("Error",error);
-// }
+btnIngresar.addEventListener("click",()=>{
+    guardarInfoUsuarios();
 
 
-
-// CorreoLocalStorage = localStorage.getItem("correo")
-// ContraseniaLocalStorage = localStorage.getItem("Contraseña")
-// function ingresar(){
-//     if(emailLogin.value == CorreoLocalStorage && passwordLogin.value == ContraseniaLocalStorage ){
-//         window.location.href = "index.html"
-//     }else{
-//         alert("Contraseña Incorrecta ❌")
-//         console.log(emailLogin.value)
-//         console.log(passwordLogin.value)
-//         console.log(CorreoLocalStorage)
-//         console.log(ContraseniaLocalStorage)
-//     }
-
-
-// }
+})
 
