@@ -6,14 +6,15 @@
  const btnIngresar = document.getElementById("btnIngresar")
 
     let datosLocalStorage = JSON.parse(localStorage.getItem("registro")) || []
- 
+    
     function guardarInfoUsuarios() {
+
         let datosUsuario = {
             nombre: Nombre.value,
             correo: Correo.value,
             clave: contrasenia.value
         }
-        datosLocalStorage.push(datosUsuario)
+        datosLocalStorage.push (datosUsuario)
 
         localStorage.setItem("registro",JSON.stringify(datosLocalStorage))
     }
