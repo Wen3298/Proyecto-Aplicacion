@@ -7,12 +7,12 @@
 // creamos el localstogare con el nombre de datos//
     let datosLocalStorage = JSON.parse(localStorage.getItem("registro")) || []
     // despues creamos una función donde van a ir todos los datos que queremos guardar en el localsotage//
-    function guardarInfoUsuarios() {
+    function guardarprodu() {
 
         let datosUsuario = {
             nombre: Nombre.value,
-            correo: Correo.value,
-            clave: contrasenia.value
+            cantidad: Cantidad.value,
+            Precio: precio.value
         }
         datosLocalStorage.push (datosUsuario)
 
